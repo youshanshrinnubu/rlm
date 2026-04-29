@@ -72,7 +72,15 @@ python_functions = ["test_*"]
 # removed --cov flags so I can run tests quickly without coverage overhead;
 # use `pytest --cov=src/rlm --cov-report=term-missing` explicitly when needed
 addopts = "-v"
+# personal: also run with -x (fail fast) so I don't have to wait through all
+# failures when iterating locally -- comment this out for CI runs
+# addopts = "-v -x"
 
 [tool.coverage.run]
 source = ["src/rlm"]
 omit = ["tests/*", "docs/*"]
+
+[tool.coverage.report]
+# personal preference: skip files with 100% coverage to keep output concise
+skip_covered = true
+show_missing = true
