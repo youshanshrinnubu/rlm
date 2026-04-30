@@ -2,6 +2,9 @@
 
 A library for training and evaluating language models using
 reinforcement learning techniques.
+
+Personal fork: using this to experiment with RLHF on smaller models.
+See my notes in /docs/experiments for details.
 """
 
 from importlib.metadata import PackageNotFoundError, version
